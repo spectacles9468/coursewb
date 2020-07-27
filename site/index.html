@@ -4,6 +4,62 @@
 	<title>Hello Coursera!</title>
 </head>
 <body>
-<h1>Hello Coursera! It's a great course!</h1>
+<h1>Hello Coursera! This is cool!</h1>
+<h2>GitHub</h2>
+Steps:
+1. Create your own repository on GitHub.
+And then how to turn that repository into something you could store your code in
+your website code in.
+And then have that same repository turn around and host your website for you.
+2. But I would very highly encourage you to go and
+read it at least through the branches chapter of the Git book. You just need to google Git book.
+If you say Git book, the very first thing you should come up as this Git book link.
+And I strongly suggest that you read the first three chapters.
+3. Go to your icon and there's a little icon next to it to the left of it and it's a plus.
+And if you click on it, click on the down arrow you could say New repository. Give it a new name and give the discription if you want.
+4. Now, the repository is going to be public.
+And we'll go ahead and initialize it with a README file always always a good idea. Click on Create repository.
+So once I have this repository, I can start interacting with it not only online here, but also through my command line prompt and upload code to this repository.
+5. For that, go to Settings
+We'll go ahead and go right here on the top right, we'll click on Settings.
+And if we scroll down, you'll see here GitHub Pages, Automatic page generator. Choose Master Branch as your source and it will have your website ready to go! You'll see here that as your project has been created at https://yourGitHubusername.github.io/repositoryname/. That's where your page is located.
+6. Now you'll see a README.md file 
+So now, if you're an advanced GitHub user, feel free to use whatever branch you want.
+<h2>Transfer files to our local machine</h2>
+Steps:
+1. Go to th repository page and click on the arrow down button on code in right. It says Clone with HTTPS. Copy the link. It is the URL actually points to our repository.
+2. Now, go ahead and open your terminal (Machintosh) or Command Prompt (Windows). Write git clone and then paste your link next to it. Clone is the command to actually take the repository that is somewhere remotely. Now, write dir/lst and you will see the directory. cd into the repository name and you'll see the only thing there is README.md.
+3. If do git status, you'll see that we are on branch master. If you don't want to stay in Master Branch, write
+git checkout branchname.
+And when we do that, now we say git status.
+We're going to be on the desired branch. And if you do ls/dir, you'll see all that files in the directory.
+4. If we want, we could just go ahead and wipe out this whole thing. And we'll basically wipe out that auto-generated website or we could leave it alone. Do mkdir foldername (say site) and cd into that site directory.
+5. Open up sublime text. And save this page in the site folder. We'll save it and call it index.html. And we could quickly do html and do Ctrl + Space for a quick little template. We'll say Hello Coursera for the title and we'll have h1 here, also say Hello Coursera. and we save the file.
+6. We'll do an ls/dir, and we see this index.html/1 file. So now to check what's going on in our local git, we'll say git status again. And we'll see that actually ./ and that's because we're inside the site directory, we say that that ./ is not actually committed at all. Well, we could go one directory up and then we'll do git status and that will tell you that the site directory is not even committed and it's not even marked to be committed.
+7.So the way Git works in order to be committed into kind that your code database, which actually resides locally in your machine. It is not the remote one, not to GitHub, but the local in your machine is you first have to mark something for committing. The way you mark something for committing is you say git add and then you say what it is you want to commit or that is you want to mark for committing. And this why I'll say dot and will just include everything in my local folder, and that's done.
+8. I'll say git status again and you'll see now what's marked for to be committed is that new file site/index.html.
+And once again, we haven't committed anything yet. We just marked it to be committed.
+9. Well, in order to actually commit it we'll say git commit, we'll say- m which is required for message and we'll give it a message. The message say My First page. So we'll press Enter, and we're done. And the only thing we need to do now is actually put this into our remote, meaning into our GitHub on the remote repository. Right now everything is sitting in the local repository. If we say git status again, you'll see that everything is great, except Your branch is ahead of 'origin/master' by 1 commit, meaning our local version of our repository with all of our code is actually ahead of the one that is remote, which is our GitHub repository.
+10. So the way we actually do it actually tells you right here is just issue a git push. Meaning we'll take our repository, take our database error code and we'll push it to the remote database which is residing at github.com. So we'll go ahead and say git push, and at this point after we enter your machine might ask you for user and a password for GitHub.
+11. Okay, so now if we switch to our browser and we'll refresh this page, you'll see that this site folder showed up here. If we click inside of it, you'll see the index.html. 
+12. We'll go to settings again because I don't remember this URL anymore, and we'll click on this URL open up in a separate tab. And what we see here is that page made by GitHub for you, but we remember that right underneath that folder is that folder called site. So, right after the link we right site/ and go.
+13. And the reason I don't actually have to specify index.html page itself is because most servers when you say / they will default to index.html.
+14. Open up Sublime. We could make another change. Hello Coursera, it's a great course. We'll save it again. We'll go back to our command line, we'll say git status. 
+15. And you'll see that now we have a modified page. Well, again, we haven't really marked it to be committed yet. If we're done editing it we could go ahead and say git add.
+And we could say it's explicitly if we want to or we could just say dot, it doesn't matter. And we added it, we'll say git status again.
+16. And you'll see now it is again mark to be committed to the repository, to our local repository. Well, I will say again git commit -m for message, and we'll say Small addition to our page content. And we'll say enter and now we've committed a change that we just made, committed that change into our local git repository.
+17. But our remote repository doesn't know anything about this. In fact, if we switch the browser and we'll refresh, still the same. Well, the reason it's still the same is because nothing really is been uploaded to GitHub yet.
+18. And if we do git status, it will tell us again that our local branch, the master branch is ahead of the remote one by 1 commit, because we committed something already.
+19. And we can have more than one commit here. We can have more than one commit and then at some point we'll go ahead and upload it or publish our changes to our repository. So we'll say git push to publish our changes.
+20. So if we switch to the browser and refresh, it might take a little bit, but eventually this will happen. So something probably got crash, here we go.  It just takes a little bit for it to propagate from its repository to its website. So it took a few seconds, but it's here.
+21. Okay, so there's clearly many, many other commands that you could use. For example you could use git pull of somebody else changed your repository. Let's say you're collaborating with somebody and somebody updated something in the remote repository in the GitHub. You want to get those changes to your local machine, you'll say git space pull, and so on.
+<h2>Browser Sync</h2>
+Steps:
+1. cd into site folder. So browsersync the sink as a command you could call from the command line and here I am just pulled it out from my history. And basically you say browser-sync start --server --directory --files "*". Beacuse you want to start browser sync in server mode, so it'll become like a local HTTP server for you. You write directory so that will actually give you a directory listing of the folder you're sitting in right now, which is this case is the folder called site. And then you say --files meaning which files should browsersync watch for. 
+2. And if any of those files change, the browsersync will go ahead and reload those things in the browser. So you don't have to keep clicking reload the page that you made over and over and over again. So in this case, we said star, I want to reload everything no matter what changes, I want those changes reloaded right away.
+3. This will go ahead and open up a browser window for me. And in this case you see it's localhost:3000. And since with the --directory, it's showing me the directory listing of that folder, which is right now is the site folder. So I can click on index right here and I can see that it connected to browsersync, and here's this it's a great course. 
+4. Now, when you make some changes in the sublime file in the second I save it, all of a sudden the page gets updated as well. So this is extremely convenient.
+5. That is a huge time saver when you're developing and trying to see immediately what's going on on the page without having to go and clicking refresh. So that's browsersync. It actually has a million other options.It's a great development helper tool.
+6. Okay, in this point your environment is all set up and you're ready to move on. 
 </body>
 </html>
